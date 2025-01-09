@@ -1,0 +1,11 @@
+spring:
+  kafka:
+    consumer:
+      bootstrap-servers: localhost:9092
+      group-id: logger-1
+      auto-offset-reset: earliest # Start from the beginning of the topic if no offset is found
+      enable-auto-commit: true
+    listener:
+      missing-topics-fatal: false # Avoid fatal error if the topic does not exist
+server:
+  port: 9292
